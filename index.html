@@ -1,26 +1,440 @@
-
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trader</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/Pablo2166/imagenes/6346eb5073a1855bb26c0be758695b6ab00840ab/call.svg" type="image/x-icon">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-</head>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>TRADER PROFESSIONAL</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+
+<!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+  </head>
+
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbyACQ3nRTaroQvYmVfy0EWkfODdIny8WoCn58zdxXNVz4cycZBLxnNSQENQPPT-wVtepQ/exec"></iframe>
+
+   
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Trader</em> Professional</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Inicio</a></li>
+        <li class="has-submenu"><a href="#section2">Acerca</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">¿Qué hacemos?</a></li>
+            <li><a href="#section3">Quiero acceder</a></li>
+
+          </ul>
+        </li>
+        <li><a href="#section5">Servicios</a></li>
+        <!-- <li><a href="#section5">Video</a></li> -->
+        <li><a href="#section6">Contacto</a></li>
+        <li><a href="#" onclick="mostrarIframe()" style="bottom: auto;" class="external">ACCESO AL SISTEMA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Contenedor del iframe (inicialmente oculto) -->
+<div id="iframeContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999;">
+  <iframe id="iframeAcceso" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+</div>
+
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/trade.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h6>UNA FORMA DE ENTRAR EN LOS MERCADOS</h6>
+              <h2><em>SEÑALES</em> PRECISAS</h2>
+              <div class="main-button">
+                  <div class="scroll-to-section"><a href="#section2">DESCUBRE AHORA</a></div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-pencil"></i>ENTRENAMIENTO</h4>
+              </div>
+              <div class="content-hide">
+                <p>Entrenamiento desde cero, con acompañamiento técnico y planificación real. Aprende a operar con confianza, paso a paso.</p>
+                <p class="hidden-sm">Aprende desde cero. Acompañamiento técnico y planificación para operar binarias con estrategia.</p>
+                <div class="scroll-to-section"><a href="#section2">Más información.</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-graduation-cap"></i>ACOMPAÑAMIENTO</h4>
+              </div>
+              <div class="content-hide">
+                <p>Acompañamiento técnico y planificación real para tus operaciones binarias. Aprende a operar con estrategia, seguridad y disciplina desde el primer día.</p>
+                <p class="hidden-sm">Acompañamiento técnico y planificación para operar.</p>
+                <div class="scroll-to-section"><a href="#section3">Detalles</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-book"></i>PLATAFORMA TÉCNICA</h4>
+              </div>
+              <div class="content-hide">
+                <p>Acceso a la plataforma de señales, que le ayudan al Trader a operar y cumplir un plan de rentabilidad.</p>
+                <p class="hidden-sm">Acceso a nuestra plataforma de señales.</p>
+                <div class="scroll-to-section"><a href="#section4">Leer más</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>¿Qué te espera?</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><a href='#tabs-1'>OPERACIONES</a></li>
+              <li><a href='#tabs-2'>PLATAFORMA DE SEÑALES</a></li>
+              <li><a href='#tabs-3'>GRUPOS VIP</a></li>
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/choose-us-image-01.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Operativas diarias</h4>
+                    <p>Recibe análisis y señales actualizadas cada día, diseñadas para ayudarte a tomar decisiones más inteligentes en tus operaciones. Nuestro enfoque se basa en estrategias probadas y lectura técnica precisa del mercado.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/choose-us-image-02.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Sistema con IA</h4>
+                    <p>Accede a una plataforma intuitiva y en tiempo real donde publicamos señales claras, con puntos de entrada y gestión de riesgo.</p> 
+                    <p>Todo lo que necesitas para operar con confianza y eficiencia.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/choose-us-image-03.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Comunicación inmediata</h4>
+                    <p>Forma parte de nuestros exclusivos grupos VIP y obtén acceso prioritario a señales premium, sesiones de análisis en vivo y soporte personalizado. Un espacio para traders comprometidos con resultados.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section coming-soon" data-section="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-xs-12">
+          <div class="continer centerIt">
+            <div>
+              <h4>¡Aprovecha! <em>Descuentos especiales</em> solo por tiempo limitado.</h4>
+
+              <div class="counter">
+
+                <div class="days">
+                  <div class="value">00</div>
+                  <span>Days</span>
+                </div>
+
+                <div class="hours">
+                  <div class="value">00</div>
+                  <span>Hours</span>
+                </div>
+
+                <div class="minutes">
+                  <div class="value">00</div>
+                  <span>Minutes</span>
+                </div>
+
+                <div class="seconds">
+                  <div class="value">00</div>
+                  <span>Seconds</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="right-content">
+            <div class="top-content">
+              <h6>¿Necesitas ayuda? <em>Contáctanos por nuestros canales oficiales</em> y te guiamos en el proceso de registro</h6>
+
+            </div>
+            <form id="contact" action="" method="get">
+              <div class="row">
+                <div class="col-md-12">
+
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <a href="https://t.me/VIP_T_Professional" target="_blank" class="button" style="display: inline-block; text-align: center; background-color: #0088cc; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                      Escríbenos por Telegram
+                    </a>
+                  </fieldset>
+                  
+                </div>
+                <div class="col-md-12">
+
+                </div>
+                <div class="col-md-12">
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section video" data-section="section5">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 align-self-center">
+
+          <div class="left-content">
+            <span>Buscamos las mejores oportunidades</span>
+            <h4>Forma parte de nuestra comunidad <em>24/7</em></h4>
+            <p>Conectamos traders como tú con análisis confiables, estrategias efectivas y señales en tiempo real para operar en IQ Option, Pocket Option y Exnova.  
+            Sigue nuestras indicaciones y toma decisiones más seguras en cada operación.  
+            <br><br>Potencia tu experiencia en cada paso.</p>
+            
+            <a href="https://t.me/VIP_T_Professional" target="_blank" class="button" style="display: inline-block; text-align: center; background-color: #0088cc; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+              Escríbenos por Telegram
+            </a>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <article class="video-item">
+            <div class="video-caption">
+              <h4>MANTEN UNA OPERATIVA RENTABLE</h4>
+            </div>
+            <figure>
+              <a><img src="assets/images/main-thumb.png"></a>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" data-section="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Te espera la mejor experiencia.</h2>
+          </div>
+        </div>
+    
+                    
+       
+           
+          <div class="container" style="color: white; text-align: center; padding: 40px 20px;">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <h4 style="color: white;">¿Quieres comenzar en el trading?</h4>
+                <p style="font-size: 18px;">
+                  Únete a nuestro <span style="color: #ffa500; font-weight: bold;">canal gratuito de Telegram</span> y accede a señales, tips y análisis diarios.<br>
+                  Es el primer paso para conocer nuestro trabajo y mejorar tus resultados sin costo.
+                </p>
+                <h5 style="color: white; margin-top: 30px;">🚀 <span style="color: orange; font-weight: bold;">Únete gratis ahora</span></h5>
+                <a href="https://t.me/coorptradres" target="_blank" class="button" style="display: inline-block; background-color: orange; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px 0;">
+                  Únete al canal
+                </a>
+                <p style="color: white; margin-top: 30px;">
+                  ¿Necesitas ayuda con el registro o tienes preguntas?<br>
+                  <a href="https://t.me/VIP_T_Professional" target="_blank" class="button" style="display: inline-block; background-color: #0088cc; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px;">
+                    Escríbenos por Telegram
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+              
+      
+        </div>
+
+      </div>
+   
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p style="color: white;">
+            © 2025 Trader Professional. Todos los derechos reservados.
+            | Plantilla adaptada de: <a href="https://templatemo.com" rel="sponsored" target="_blank" style="color: orange;">TemplateMo</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+
+<script>
+  function mostrarIframe() {
+    // Oculta todo el contenido actual del body (opcional si quieres solo el iframe)
+    document.body.innerHTML = '';
+    
+    // Crea un contenedor con el iframe
+    const contenedor = document.createElement('div');
+    contenedor.style.position = 'fixed';
+    contenedor.style.top = '0';
+    contenedor.style.left = '0';
+    contenedor.style.width = '100vw';
+    contenedor.style.height = '100vh';
+    contenedor.style.zIndex = '9999';
+
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://script.google.com/macros/s/AKfycbyACQ3nRTaroQvYmVfy0EWkfODdIny8WoCn58zdxXNVz4cycZBLxnNSQENQPPT-wVtepQ/exec";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+
+    contenedor.appendChild(iframe);
+    document.body.appendChild(contenedor);
+  }
+</script>
+
+
 </body>
 </html>
