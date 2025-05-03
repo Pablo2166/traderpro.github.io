@@ -20,7 +20,15 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
-
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAkrWYNNaamxBNVjp_M18O3n4HIleyKjnJczYuvZ9Ko3lvbhyG5fd0XHUQFRr4x2Zd2HKxTjos5Ousx_s&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
+<style>
+  .paypal {
+    color: white;
+    font-family:sans-serif;
+  }
+</style>
 <!--
     
 TemplateMo 557 Grad School
@@ -28,6 +36,8 @@ TemplateMo 557 Grad School
 https://templatemo.com/tm-557-grad-school
 
 -->
+
+    
   </head>
 
 <body>
@@ -223,35 +233,24 @@ https://templatemo.com/tm-557-grad-school
           </div>
         </div>
         <div class="col-md-5">
-          <div class="right-content">
-            <div class="top-content">
-              <h6>¿Necesitas ayuda? <em>Contáctanos por nuestros canales oficiales</em> y te guiamos en el proceso de registro</h6>
+          <div class="paypal">
 
-            </div>
-            <form id="contact" action="" method="get">
-              <div class="row">
-                <div class="col-md-12">
-
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <a href="https://t.me/VIP_T_Professional" target="_blank" class="button" style="display: inline-block; text-align: center; background-color: #0088cc; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-                      Escríbenos por Telegram
-                    </a>
-                  </fieldset>
-                  
-                </div>
-                <div class="col-md-12">
-
-                </div>
-                <div class="col-md-12">
-
-                </div>
-              </div>
-            </form>
+            <div id="paypal-container-XAAZPB9XV32JQ"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "XAAZPB9XV32JQ",
+              }).render("#paypal-container-XAAZPB9XV32JQ")
+            </script>
+              <fieldset>
+                <a href="https://t.me/VIP_T_Professional" target="_blank" class="button" style="display: inline-block; text-align: center; background-color: #0088cc; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                  Escríbenos por Telegram
+                </a>
+              </fieldset>
           </div>
         </div>
+        
       </div>
+
     </div>
   </section>
 
