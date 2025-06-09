@@ -37,6 +37,79 @@ https://templatemo.com/tm-557-grad-school
 
 -->
 
+<style>
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Opcional, para que se acomoden en pantallas pequeñas */
+  }
+
+  .main-button {
+    text-align: center;
+  }
+
+  .main-button h6 {
+    margin-bottom: 5px;
+  }
+
+
+
+
+            .main-button {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .main-button:hover::before {
+            left: 100%;
+        }
+
+        .main-button:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-button h6 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+</style>
+
+<style>
+
+
+
+
+
+</style>
+
     
   </head>
 
@@ -85,9 +158,25 @@ https://templatemo.com/tm-557-grad-school
           <div class="caption">
               <h6>UNA FORMA DE ENTRAR EN LOS MERCADOS</h6>
               <h2><em>SEÑALES</em> PRECISAS</h2>
-              <div class="main-button">
-                  <div class="scroll-to-section"><a href="#section2">DESCUBRE AHORA</a></div>
-              </div>
+
+
+            <!-- Contenedor de botones mejorado -->
+            <div class="buttons-container">
+                <div class="main-button">
+                    <h6>Acceso al sistema</h6>
+                    <div class="scroll-to-section">
+                        <a href="#" onclick="mostrarIframe()" style="display: inline-block; text-align: center; background-color: #4bae80; color: rgb(23, 22, 22); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">INGRESAR</a>
+                    </div>
+                </div><br>
+                <div class="main-button">
+                    <h6>Registro Usuarios</h6>
+                    <div class="scroll-to-section">
+                        <a href="#" onclick="mostrarIframe2()">REGÍSTRATE</a>
+                    </div>
+                </div>
+            </div>
+
+
           </div>
       </div>
   </section>
