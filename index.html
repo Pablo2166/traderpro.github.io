@@ -501,7 +501,15 @@ https://templatemo.com/tm-557-grad-school
     </script>
 
 <script>
+// Variable para guardar el contenido original
+let contenidoOriginal = null;
+
 function mostrarIframe() {
+    // Guardar el contenido original antes de limpiarlo
+    if (!contenidoOriginal) {
+        contenidoOriginal = document.body.innerHTML;
+    }
+    
     document.body.innerHTML = '';
     
     // Configurar el body para evitar scroll horizontal
@@ -544,6 +552,39 @@ function mostrarIframe() {
     iframe.style.overflowX = 'hidden';
     iframe.scrolling = "yes";
     
+    // Crear botón flotante de regreso
+    const botonRegresar = document.createElement('button');
+    botonRegresar.innerHTML = 'Regresar';
+    botonRegresar.style.position = 'fixed';
+    botonRegresar.style.top = '10px';
+    botonRegresar.style.right = '10px';
+    botonRegresar.style.zIndex = '10000'; // Mayor que el contenedor
+    botonRegresar.style.backgroundColor = '#007bff';
+    botonRegresar.style.color = 'white';
+    botonRegresar.style.border = 'none';
+    botonRegresar.style.padding = '5px 7px';
+    botonRegresar.style.borderRadius = '5px';
+    botonRegresar.style.cursor = 'pointer';
+    botonRegresar.style.fontSize = '14px';
+    botonRegresar.style.fontWeight = 'bold';
+    botonRegresar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+    botonRegresar.style.transition = 'all 0.3s ease';
+    
+    // Efectos hover para el botón
+    botonRegresar.onmouseenter = function() {
+        this.style.backgroundColor = '#0056b3';
+        this.style.transform = 'scale(1.05)';
+    };
+    botonRegresar.onmouseleave = function() {
+        this.style.backgroundColor = '#007bff';
+        this.style.transform = 'scale(1)';
+    };
+    
+    // Función para regresar
+    botonRegresar.onclick = function() {
+        window.location.href = 'https://www.traderprofessional.com/';
+    };
+    
     // Añadir viewport meta tag si no existe
     let viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
@@ -555,11 +596,15 @@ function mostrarIframe() {
     
     contenedor.appendChild(iframe);
     document.body.appendChild(contenedor);
+    document.body.appendChild(botonRegresar);
 }
-</script>
 
-  <script>
 function mostrarIframe2() {
+    // Guardar el contenido original antes de limpiarlo
+    if (!contenidoOriginal) {
+        contenidoOriginal = document.body.innerHTML;
+    }
+    
     document.body.innerHTML = '';
     
     const contenedor = document.createElement('div');
@@ -580,10 +625,75 @@ function mostrarIframe2() {
     // Asegurar que el iframe permita scroll
     iframe.scrolling = "yes";
     
+    // Crear botón flotante de regreso
+    const botonRegresar = document.createElement('button');
+    botonRegresar.innerHTML = 'Regresar';
+    botonRegresar.style.position = 'fixed';
+    botonRegresar.style.top = '10px';
+    botonRegresar.style.right = '10px';
+    botonRegresar.style.zIndex = '10000'; // Mayor que el contenedor
+    botonRegresar.style.backgroundColor = '#007bff';
+    botonRegresar.style.color = 'white';
+    botonRegresar.style.border = 'none';
+    botonRegresar.style.padding = '5px 7px';
+    botonRegresar.style.borderRadius = '5px';
+    botonRegresar.style.cursor = 'pointer';
+    botonRegresar.style.fontSize = '14px';
+    botonRegresar.style.fontWeight = 'bold';
+    botonRegresar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+    botonRegresar.style.transition = 'all 0.3s ease';
+    
+    // Efectos hover para el botón
+    botonRegresar.onmouseenter = function() {
+        this.style.backgroundColor = '#0056b3';
+        this.style.transform = 'scale(1.05)';
+    };
+    botonRegresar.onmouseleave = function() {
+        this.style.backgroundColor = '#007bff';
+        this.style.transform = 'scale(1)';
+    };
+    
+    // Función para regresar
+    botonRegresar.onclick = function() {
+        window.location.href = 'https://www.traderprofessional.com/';
+    };
+    
     contenedor.appendChild(iframe);
     document.body.appendChild(contenedor);
+    document.body.appendChild(botonRegresar);
+}
+
+// Función para restaurar el contenido original
+function regresarAlContenidoOriginal() {
+    if (contenidoOriginal) {
+        // Restaurar estilos del body y html
+        document.body.style.margin = '';
+        document.body.style.padding = '';
+        document.body.style.overflow = '';
+        document.body.style.width = '';
+        document.body.style.height = '';
+        
+        document.documentElement.style.margin = '';
+        document.documentElement.style.padding = '';
+        document.documentElement.style.width = '';
+        document.documentElement.style.height = '';
+        document.documentElement.style.overflow = '';
+        
+        // Restaurar el contenido original
+        document.body.innerHTML = contenidoOriginal;
+        
+        // Reejecutar scripts si es necesario
+        const scripts = document.body.querySelectorAll('script');
+        scripts.forEach(script => {
+            if (script.innerHTML) {
+                eval(script.innerHTML);
+            }
+        });
+    }
 }
 </script>
+
+
 
 
 </body>
