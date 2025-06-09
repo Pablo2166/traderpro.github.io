@@ -51,6 +51,8 @@ https://templatemo.com/tm-557-grad-school
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
+        <li><a href="#" onclick="mostrarIframe()" style="bottom: auto;" class="external">ACCESO AL SISTEMA</a></li>
+        <li><a href="#" onclick="mostrarIframe2()" style="bottom: auto;" class="external">REGISTRO USUARIOS</a></li>
         <li><a href="#section1">Inicio</a></li>
         <li class="has-submenu"><a href="#section2">Acerca</a>
           <ul class="sub-menu">
@@ -62,7 +64,7 @@ https://templatemo.com/tm-557-grad-school
         <li><a href="#section5">Servicios</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="#section6">Contacto</a></li>
-        <li><a href="#" onclick="mostrarIframe()" style="bottom: auto;" class="external">ACCESO AL SISTEMA</a></li>
+
       </ul>
     </nav>
   </header>
@@ -411,7 +413,31 @@ https://templatemo.com/tm-557-grad-school
 
 <script>
   function mostrarIframe() {
-    // Oculta todo el contenido actual del body (opcional si quieres solo el iframe)
+ 
+    document.body.innerHTML = '';
+    
+    const contenedor = document.createElement('div');
+    contenedor.style.position = 'fixed';
+    contenedor.style.top = '0';
+    contenedor.style.left = '0';
+    contenedor.style.width = '100vw';
+    contenedor.style.height = '100vh';
+    contenedor.style.zIndex = '9999';
+
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://script.google.com/macros/s/AKfycbwaFKi9n_HEE13hyLfeTFLH3dXoYWKDWlrT-XwLrVGNyzoqqQapVyxnAS059LnXZLSR/exec";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+
+    contenedor.appendChild(iframe);
+    document.body.appendChild(contenedor);
+  }
+</script>
+
+  <script>
+  function mostrarIframe2() {
+    
     document.body.innerHTML = '';
     
     // Crea un contenedor con el iframe
@@ -424,7 +450,7 @@ https://templatemo.com/tm-557-grad-school
     contenedor.style.zIndex = '9999';
 
     const iframe = document.createElement('iframe');
-    iframe.src = "https://script.google.com/macros/s/AKfycbwaFKi9n_HEE13hyLfeTFLH3dXoYWKDWlrT-XwLrVGNyzoqqQapVyxnAS059LnXZLSR/exec";
+    iframe.src = "https://script.google.com/macros/s/AKfycbznt2FVXUMBwiQGI9KA7Kt1SMF_oajEiwMEKFqwT69F6-kiwRa6CBu5Hit2K3xGc8v7/exec";
     iframe.style.width = "100%";
     iframe.style.height = "100%";
     iframe.style.border = "none";
