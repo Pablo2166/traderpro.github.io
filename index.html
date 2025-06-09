@@ -412,9 +412,22 @@ https://templatemo.com/tm-557-grad-school
     </script>
 
 <script>
-  function mostrarIframe() {
- 
+function mostrarIframe() {
     document.body.innerHTML = '';
+    
+    // Configurar el body para evitar scroll horizontal
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.overflow = 'hidden';
+    document.body.style.width = '100%';
+    document.body.style.height = '100%';
+    
+    // Configurar el HTML también
+    document.documentElement.style.margin = '0';
+    document.documentElement.style.padding = '0';
+    document.documentElement.style.width = '100%';
+    document.documentElement.style.height = '100%';
+    document.documentElement.style.overflow = 'hidden';
     
     const contenedor = document.createElement('div');
     contenedor.style.position = 'fixed';
@@ -424,16 +437,36 @@ https://templatemo.com/tm-557-grad-school
     contenedor.style.height = '100vh';
     contenedor.style.zIndex = '9999';
     contenedor.style.overflow = 'auto';
-
+    contenedor.style.margin = '0';
+    contenedor.style.padding = '0';
+    // Evitar scroll horizontal específicamente
+    contenedor.style.overflowX = 'hidden';
+    contenedor.style.overflowY = 'auto';
+    
     const iframe = document.createElement('iframe');
     iframe.src = "https://script.google.com/macros/s/AKfycbwaFKi9n_HEE13hyLfeTFLH3dXoYWKDWlrT-XwLrVGNyzoqqQapVyxnAS059LnXZLSR/exec";
     iframe.style.width = "100%";
     iframe.style.height = "100%";
     iframe.style.border = "none";
-
+    iframe.style.margin = '0';
+    iframe.style.padding = '0';
+    // Configuraciones específicas para móviles
+    iframe.style.maxWidth = '100vw';
+    iframe.style.overflowX = 'hidden';
+    iframe.scrolling = "yes";
+    
+    // Añadir viewport meta tag si no existe
+    let viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) {
+        viewport = document.createElement('meta');
+        viewport.name = 'viewport';
+        viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        document.head.appendChild(viewport);
+    }
+    
     contenedor.appendChild(iframe);
     document.body.appendChild(contenedor);
-  }
+}
 </script>
 
   <script>
