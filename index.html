@@ -436,11 +436,9 @@ https://templatemo.com/tm-557-grad-school
 </script>
 
   <script>
-  function mostrarIframe2() {
-    
+function mostrarIframe2() {
     document.body.innerHTML = '';
     
-    // Crea un contenedor con el iframe
     const contenedor = document.createElement('div');
     contenedor.style.position = 'fixed';
     contenedor.style.top = '0';
@@ -448,16 +446,20 @@ https://templatemo.com/tm-557-grad-school
     contenedor.style.width = '100vw';
     contenedor.style.height = '100vh';
     contenedor.style.zIndex = '9999';
-
+    // Añadir overflow para permitir scroll
+    contenedor.style.overflow = 'auto';
+    
     const iframe = document.createElement('iframe');
     iframe.src = "https://script.google.com/macros/s/AKfycby7DDeS1JoCKKlnv_6GIIYimYjzfe-KLF7dDJUH0JfmSGGfb8bDAmNChBKcG3x8HEJt/exec";
     iframe.style.width = "100%";
     iframe.style.height = "100%";
     iframe.style.border = "none";
-
+    // Asegurar que el iframe permita scroll
+    iframe.scrolling = "yes";
+    
     contenedor.appendChild(iframe);
     document.body.appendChild(contenedor);
-  }
+}
 </script>
 
 
