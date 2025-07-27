@@ -28,6 +28,132 @@
     color: white;
     font-family:sans-serif;
   }
+  
+  /* Premium Card Effects */
+  .premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+  
+  .premium-card:hover .card-glow {
+    opacity: 1 !important;
+  }
+  
+  .play-store-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .play-store-btn:hover img {
+    filter: brightness(1.1);
+  }
+  
+  .web-platform-card:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%) !important;
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Responsive Premium Design */
+  @media (max-width: 768px) {
+    .premium-card {
+      margin-bottom: 30px !important;
+    }
+    
+    .premium-card h3 {
+      font-size: 1.4rem !important;
+    }
+    
+    .web-platform-card h3 {
+      font-size: 1.8rem !important;
+    }
+  }
+  
+  /* Responsive Design for Products Container */
+  @media (max-width: 768px) {
+    .section.main-banner {
+      min-height: 100vh !important;
+      height: auto !important;
+    }
+    
+    .video-overlay.header-text {
+      padding: 100px 20px 50px 20px !important;
+      height: auto !important;
+      min-height: 100vh !important;
+    }
+    
+    .video-overlay .caption {
+      padding-bottom: 50px !important;
+    }
+    
+    .products-container {
+      grid-template-columns: 1fr !important;
+      gap: 15px !important;
+      padding: 0 20px;
+      margin: 20px auto !important;
+    }
+    
+    .product-card {
+      max-width: 400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .section.main-banner .caption h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    
+    .section.main-banner .caption h6 {
+      font-size: 0.9rem;
+    }
+    
+    .section.main-banner .caption p {
+      font-size: 0.95rem !important;
+      margin: 15px 0 !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section.main-banner {
+      min-height: auto !important;
+    }
+    
+    .video-overlay.header-text {
+      padding: 80px 15px 40px 15px !important;
+    }
+    
+    .product-card {
+      padding: 20px 15px !important;
+    }
+    
+    .product-card h4 {
+      font-size: 1.1rem !important;
+    }
+    
+    .product-card p {
+      font-size: 0.85rem !important;
+      min-height: auto !important;
+    }
+    
+    .product-card a[onclick] {
+      padding: 10px 25px !important;
+      font-size: 0.9rem;
+    }
+    
+    .product-card div[style*="font-size: 2.5rem"] {
+      font-size: 2rem !important;
+    }
+    
+    #bg-video {
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+  }
 </style>
 <!--
     
@@ -108,6 +234,135 @@ https://templatemo.com/tm-557-grad-school
 
 
 
+/* Professional Mobile Responsive Design */
+@media (max-width: 991px) {
+  /* Tablets and below */
+  .products-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile devices */
+  .section.main-banner {
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  .video-overlay.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 80px 20px 40px 20px;
+  }
+  
+  .video-overlay .caption {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Optimize text for mobile */
+  .caption h6 {
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+  }
+  
+  .caption h2 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  
+  .caption h2 em {
+    font-style: normal;
+    color: #f5a425;
+  }
+  
+  .caption > p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Products in 2x2 grid */
+  .products-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 0 10px !important;
+  }
+  
+  .product-card {
+    padding: 20px 15px !important;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-card > div:first-child {
+    font-size: 2rem !important;
+  }
+  
+  .product-card h4 {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .product-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .product-card a {
+    margin-top: auto;
+  }
+  
+  .product-card a[onclick] {
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Small mobile devices */
+  .products-container {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  
+  .product-card {
+    max-width: 350px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .caption h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  /* Very small devices */
+  .video-overlay.header-text {
+    padding: 70px 15px 30px 15px;
+  }
+  
+  .caption h6 {
+    font-size: 0.8rem;
+  }
+  
+  .caption h2 {
+    font-size: 1.3rem;
+  }
+  
+  .caption > p {
+    font-size: 0.9rem;
+  }
+}
 </style>
 
     
@@ -157,24 +412,13 @@ https://templatemo.com/tm-557-grad-school
       <div class="video-overlay header-text">
           <div class="caption">
               <h6>UNA FORMA FÁCIL DE HACER TRADING</h6>
-              <h2><em>SEÑALES</em> PRECISAS</h2>
-
-
-            <!-- Contenedor de botones mejorado -->
-            <div class="buttons-container">
-                <div class="main-button">
-                    <h6>Acceso al sistema</h6>
-                    <div class="scroll-to-section">
-                        <a href="#" onclick="mostrarIframe()" style="display: inline-block; text-align: center; background-color: #f5a425; color: rgb(23, 22, 22); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">INGRESAR</a>
-                    </div>
-                </div><br>
-                <div class="main-button">
-                    <h6>Registro Usuarios</h6>
-                    <div class="scroll-to-section">
-                        <a href="#" onclick="mostrarIframe2()" style="display: inline-block; text-align: center; background-color: #00bbea; color: rgb(23, 22, 22); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">REGÍSTRO</a>
-                    </div>
+              <h2><em>TRADER</em> PROFESSIONAL</h2>
+              <h6>El camino hacia el cambio financiero es ahora, aprovecha cada oportunidad.</h6>
+              <div class="main-button-container" style="margin-top: 30px;">
+                <div class="scroll-to-section">
+                  <a href="#section3" style="background-color: #f5a425; color: white; padding: 15px 40px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease;">VER NUESTRAS APLICACIONES</a>
                 </div>
-            </div>
+              </div>
 
 
           </div>
@@ -289,7 +533,120 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </section>
 
-  <section class="section coming-soon" data-section="section3">
+  <!-- ***** Premium Apps Showcase Section ***** -->
+  <section class="section apps-showcase" data-section="section3" style="background-image: url(assets/images/courses-bg.jpg); padding: 100px 0; position: relative; overflow: hidden;">
+    <!-- Animated Background -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1;">
+      <div style="position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, #f5a425 0%, transparent 70%); top: -150px; right: -150px; animation: float 6s ease-in-out infinite;"></div>
+      <div style="position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, #00bbea 0%, transparent 70%); bottom: -100px; left: -100px; animation: float 8s ease-in-out infinite;"></div>
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+      <!-- Section Header -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 style="color: white; font-size: 3rem; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">
+            <span style="background: linear-gradient(90deg, #f5a425, #00bbea); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NUESTRAS SOLUCIONES</span>
+          </h2>
+          <p style="color: rgba(255,255,255,0.8); font-size: 1.3rem; margin-bottom: 60px;">Herramientas profesionales para traders exitosos</p>
+        </div>
+      </div>
+      
+      <!-- Apps Grid -->
+      <div class="row">
+        <!-- App de Señales -->
+        <div class="col-lg-6 col-md-6" style="margin-bottom: 40px;">
+          <div class="premium-card" style="background: linear-gradient(135deg, rgba(245, 164, 37, 0.1) 0%, rgba(245, 164, 37, 0.05) 100%); border: 2px solid #f5a425; border-radius: 25px; padding: 50px 40px; position: relative; overflow: hidden; height: 100%; transition: all 0.4s ease;">
+            <div class="card-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(245, 164, 37, 0.2) 0%, transparent 70%); opacity: 0; transition: opacity 0.3s ease;"></div>
+            
+            <div style="position: relative; z-index: 2;">
+              <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                <div style="font-size: 4rem; margin-right: 20px;">📡</div>
+                <div>
+                  <h3 style="color: #f5a425; font-size: 1.8rem; margin-bottom: 5px; font-weight: 600;">App de Señales Premium</h3>
+                  <span style="background: #f5a425; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">MÁS DESCARGADA</span>
+                </div>
+              </div>
+              
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">Recibe señales de trading con hasta 92% de precisión. Notificaciones instantáneas, análisis técnico y recomendaciones personalizadas.</p>
+              
+              <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                <li style="color: rgba(255,255,255,0.8); margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #f5a425; margin-right: 10px;"></i> Señales en tiempo real 24/7</li>
+                <li style="color: rgba(255,255,255,0.8); margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #f5a425; margin-right: 10px;"></i> Análisis técnico avanzado</li>
+                <li style="color: rgba(255,255,255,0.8); margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #f5a425; margin-right: 10px;"></i> Soporte personalizado VIP</li>
+              </ul>
+              
+              <a href="https://play.google.com/store/apps/details?id=com.traderprof.trading_risk_calculator" target="_blank" class="play-store-btn" style="display: inline-block; transition: all 0.3s ease;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponible en Google Play" style="height: 60px;">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Risk Calculator -->
+        <div class="col-lg-6 col-md-6" style="margin-bottom: 40px;">
+          <div class="premium-card" style="background: linear-gradient(135deg, rgba(0, 187, 234, 0.1) 0%, rgba(0, 187, 234, 0.05) 100%); border: 2px solid #00bbea; border-radius: 25px; padding: 50px 40px; position: relative; overflow: hidden; height: 100%; transition: all 0.4s ease;">
+            <div class="card-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(0, 187, 234, 0.2) 0%, transparent 70%); opacity: 0; transition: opacity 0.3s ease;"></div>
+            
+            <div style="position: relative; z-index: 2;">
+              <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                <div style="font-size: 4rem; margin-right: 20px;">📈</div>
+                <div>
+                  <h3 style="color: #00bbea; font-size: 1.8rem; margin-bottom: 5px; font-weight: 600;">App Calculadora de Trading</h3>
+                  <span style="background: #00bbea; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">NUEVA!!</span>
+                </div>
+              </div>
+              
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">Gestiona tu capital como los profesionales. Calcula automáticamente el plan adecuado de acuerdo a tu capital y minimiza tus pérdidas.</p>
+              
+              <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                <li style="color: rgba(255,255,255,0.8); margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #00bbea; margin-right: 10px;"></i> Cálculo de riesgo - operación</li>
+                <li style="color: rgba(255,255,255,0.8); margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #00bbea; margin-right: 10px;"></i> Gestión de riesgo 1-2%</li>
+                <li style="color: rgba(255,255,255,0.8); margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #00bbea; margin-right: 10px;"></i> Compatible con todos los brokers</li>
+              </ul>
+              
+              <a href="https://play.google.com/store/apps/details?id=com.traderprof.trading_risk_calculator" target="_blank" class="play-store-btn" style="display: inline-block; transition: all 0.3s ease;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponible en Google Play" style="height: 60px;">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Web Platform Section -->
+      <div class="row" style="margin-top: 60px;">
+        <div class="col-md-12">
+          <div class="web-platform-card" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 25px; padding: 60px 40px; text-align: center; position: relative; overflow: hidden;">
+            <h3 style="color: white; font-size: 2.5rem; margin-bottom: 20px; font-weight: 600;">Plataforma Web Completa</h3>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Accede a todas nuestras herramientas desde cualquier dispositivo. Sistema web profesional con todas las funcionalidades.</p>
+            
+            <div class="row">
+              <div class="col-md-6" style="margin-bottom: 30px;">
+                <div style="background: rgba(245, 164, 37, 0.1); border: 1px solid rgba(245, 164, 37, 0.3); border-radius: 15px; padding: 30px; height: 100%;">
+                  <div style="font-size: 3rem; margin-bottom: 15px;">🔐</div>
+                  <h4 style="color: #f5a425; margin-bottom: 15px;">Acceso al Sistema</h4>
+                  <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Ingresa a tu cuenta y comienza a operar con nuestras herramientas profesionales</p>
+                  <a href="#" onclick="mostrarIframe()" style="display: inline-block; background: #f5a425; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;">INGRESAR</a>
+                </div>
+              </div>
+              
+              <div class="col-md-6" style="margin-bottom: 30px;">
+                <div style="background: rgba(0, 187, 234, 0.1); border: 1px solid rgba(0, 187, 234, 0.3); border-radius: 15px; padding: 30px; height: 100%;">
+                  <div style="font-size: 3rem; margin-bottom: 15px;">🚀</div>
+                  <h4 style="color: #00bbea; margin-bottom: 15px;">Registro Gratuito</h4>
+                  <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Únete a más de 10,000 traders que ya confían en nuestras herramientas</p>
+                  <a href="#" onclick="mostrarIframe2()" style="display: inline-block; background: #00bbea; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;">REGISTRARSE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Premium Apps Showcase Section End ***** -->
+
+  <section class="section coming-soon" data-section="section4">
     <div class="container">
       <div class="row">
         <div class="col-md-7 col-xs-12">
